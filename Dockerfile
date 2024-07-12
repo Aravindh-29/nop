@@ -6,7 +6,7 @@ RUN adduser nop
 RUN mkdir app && chown nop /app 
 USER nop 
 WORKDIR /app 
-ARG Download_url= "https://github.com/nopSolutions/nopCommerce/releases/download/release-4.70.4/nopCommerce_4.70.4_NoSource_linux_x64.zip" 
+ARG Download_url="https://github.com/nopSolutions/nopCommerce/releases/download/release-4.70.4/nopCommerce_4.70.4_NoSource_linux_x64.zip" 
 RUN wget ${Download_url} 
 RUN unzip nopCommerce_4.70.4_NoSource_linux_x64.zip 
 RUN mkdir bin && mkdir logs 
